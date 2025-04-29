@@ -1,4 +1,10 @@
-
+/**
+ * createBoxes
+ * Creates a bunch of `.box` divs inside a given container.
+ *
+ * @param count    Number of boxes to generate
+ * @param selector CSS selector for the container (e.g. '#container')
+ */
 
 function createBoxes(count, selector) {
     const container = document.querySelector(selector);
@@ -20,6 +26,10 @@ function createBoxes(count, selector) {
         });
     });
   }
+
+document.querySelector('#reset').addEventListener('click', () => {
+  createBoxes(400, '#container');
+});
   
   // Example
   createBoxes(19, '#container');
