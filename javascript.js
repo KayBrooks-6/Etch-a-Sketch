@@ -24,7 +24,7 @@ function renderGrid(gridSize) {
       box.style.backgroundColor = 'red';
     });
     box.addEventListener('mouseleave', () => {
-      box.style.backgroundColor = 'blue';
+    //   box.style.backgroundColor = 'blue';
     });
   
     container.appendChild(box);

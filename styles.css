@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     width: 960px;           /* match totalWidthInPixels */
     border: 1px solid #ccc;
+    margin-top: 10px;
+    gap: 2px;
   }
   
   .box {
@@ -14,3 +16,4 @@
     background-color: red;
   }
   
+/* secondary challenge for opacity */
