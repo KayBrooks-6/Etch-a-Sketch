@@ -3,6 +3,11 @@ const defaultGridSize    = 20;
 const maximumGridSize    = 100;
 const totalWidthInPixels = 960;
 
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+
 function renderGrid(gridSize) {
   const container = document.querySelector(containerSelector);
   if (container === null) {
@@ -21,11 +26,14 @@ function renderGrid(gridSize) {
     box.style.height = boxSizePx + 'px';
   
     box.addEventListener('mouseenter', () => {
-      box.style.backgroundColor = 'red';
+      const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+      box.style.backgroundColor = rndCol;
     });
-    box.addEventListener('mouseleave', () => {
-      box.style.backgroundColor = 'blue';
-    });
+    
+
+    // box.addEventListener('mouseleave', () => {
+    //   box.style.backgroundColor = 'blue';
+    // });
   
     container.appendChild(box);
   });
